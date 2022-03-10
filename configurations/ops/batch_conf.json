@@ -1,0 +1,20 @@
+{
+    "affinity": {
+        "n_cpu_core": 6,
+        "n_gpu": 0,
+        "cpu_per_run": 2,
+        "set_affinity": true
+  },
+    "general": {
+        "runs_per_setting": 5,
+        "experiment_title": "SAC_Fly"
+    },
+    "variants": [{
+      "learning_rate": {
+          "key": ["algo","learning_rate"],
+          "values": [7e-4,1e-3],
+          "short": "lr"
+      }
+    }]
+
+}
