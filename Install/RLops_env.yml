@@ -5,11 +5,12 @@ channels:
 dependencies:
 - python=3.7
 - numpy
+- scipy=1.7.0
 - psutil
 - opencv  # atari.
 - pip
 - gym
-- pip3:
+- pip:
   - box2d-py
   - atari-py
   - pyprind  # progbar.
