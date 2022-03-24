@@ -1,0 +1,7 @@
+[submodule "rlpyt"]
+	path = rlpyt
+	url = https://github.com/wingbender/rlpyt.git
+	branch = release
+[submodule "envs/flySim"]
+	path = envs/flySim
+	url = https://github.com/wingbender/flySim.git
