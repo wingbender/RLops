@@ -84,8 +84,9 @@ def build_and_train(config_path=None, slot_affinity_code=None, log_dir=None, run
     # If a logging directory is provided and it has a viable configuration file (usually written by the batch mode)
     # Load it and make changes to our configuration (overriding previous values, unset changes are taken from default)
     if log_dir is not None:
-        variant = load_variant(log_dir)
-        config = update_config(config, variant)
+        if os.path.isfile(os.path.join(log_dir, "variant_config")):
+            variant = load_variant(log_dir)
+            config = update_config(config, variant)
 
     if config['sampler']['eval_env_kwargs'] == "env_kwargs":
         config['sampler']['eval_env_kwargs'] = config['sampler']['env_kwargs']
