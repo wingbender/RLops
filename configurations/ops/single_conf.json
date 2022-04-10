@@ -39,7 +39,7 @@
     "sampler": {
         "eval_env_kwargs":"env_kwargs",
         "env_kwargs": {
-            "id": "gym_flySim:flySim-v0",
+            "id": "flySim-v0",
             "config_path": null
         },
         "max_decorrelation_steps": 0,
