@@ -30,7 +30,7 @@ from rlpyt.replays.non_sequence.time_limit import (TlUniformReplayBuffer,
                                                    AsyncTlUniformReplayBuffer)
 import pickle
 import psutil
-# import gym_flySim
+import gym_flySim
 
 
 from utils.helper_functions import get_relevant_kwargs
