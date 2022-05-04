@@ -1,7 +1,7 @@
 {
     "general": {
         "sampler": "CpuSampler",
-        "algo": "SACfD",
+        "algo": "SAC",
         "agent": "SacAgent",
         "runner": "MinibatchRlEval"
     },
@@ -29,31 +29,26 @@
     },
     "algo": {
         "replay_size": 50000,
-        "replay_ratio": 1,
-        "batch_size": 1048,
-        "min_steps_learn": 256,
-        "demonstrations_path": "./data/demonstrations/fly_demo.pkl",
-        "expert_ratio": 0.4,
-        "expert_discount": 0.6,
-        "fixed_alpha": null,
-        "n_step_return": 10
+        "replay_ratio": 4,
+        "batch_size": 256,
+        "min_steps_learn": 256
     },
     "sampler": {
         "eval_env_kwargs":"env_kwargs",
         "env_kwargs": {
             "id": "flySim-v0",
-            "config_path": null
+            "config_path": "./configurations/environment/fly_env_config_reduced.json"
         },
         "max_decorrelation_steps": 0,
-        "eval_max_steps": 5000,
-        "eval_max_trajectories": 48,
-        "batch_T": 128,
-        "batch_B": 48,
-        "eval_n_envs": 48
+        "eval_max_steps": 1024,
+        "eval_max_trajectories": 8,
+        "batch_T": 64,
+        "batch_B": 8,
+        "eval_n_envs": 8
     },
     "runner": {
-        "n_steps": 100000,
-        "log_interval_steps": 10000
+        "n_steps": 1000000,
+        "log_interval_steps": 2048
     },
     "logger": {
         "log_dir": "./data/experiments/flySim/",
